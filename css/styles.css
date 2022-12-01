@@ -89,8 +89,8 @@ body {
   width: 1200px;
 }
 
-/* Головна сторінка*/
-/* Хедер */
+/* ГОЛОВНА СТОРІНКА*/
+/* ХЕДЕР */
 .header {
   /* padding-top: 24px;
   padding-bottom: 25px; */
@@ -203,7 +203,7 @@ body {
   align-items: center;
 }
 
-/* Герой */
+/* ГЕРОЙ */
 .hero {
   background-color: #2f303a;
 
@@ -256,14 +256,58 @@ body {
   border-color: var(--accent-color);
   border-radius: 4px;
 }
+
 .hero.section {
   padding-top: 200px;
   padding-bottom: 200px;
 }
 
-/* Особливості */
-.special.section {
+/* МОДАЛЬНЕ ВІКНО */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close { 
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  margin-left: 480px;
+  padding-top: 4px;
+  
+  background-color: rgba(255, 255, 255, 1);
+  
+}
+
+/* ОСОБЛИВОСТІ */
+
 .hidden-header {
   position: absolute;
   width: 1px;
@@ -308,7 +352,8 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Чим ми займаємося */
+/* ЧИМ МИ ЗАЙМАЄМОСЯ */
+
 .no-padding {
   padding-top: 0px;
 }
@@ -347,7 +392,8 @@ body {
   text-align: center;
 }
 
-/* Наша команда */
+/* НАША КОМАНДА */
+
 .comando {
   background-color: #f5f4fa;
 }
@@ -412,7 +458,7 @@ body {
   background-color: var(--accent-color);
 }
 
-/* Постійні клієнти */
+/* ПОСТІЙНІ КЛІЄНТИ */
 
 .clients.section-header {
   margin-bottom: 50px;
@@ -443,17 +489,13 @@ body {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
-.client-icon {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
+
 
 .list.clients-list .clients-icon + .clients-icon {
   margin-left: 30px;
 }
 
-/* Футер */
+/* ФУТЕР */
 .footer {
   background-color: var(--secondary-background-color);
   padding-top: 60px;
@@ -591,13 +633,12 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box {
-  
   position: relative;
   overflow: hidden;
 }
 .overlay {
   position: absolute;
-  
+
   padding: 63px 24px;
   top: 0;
   left: 0;
